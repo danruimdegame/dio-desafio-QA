@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+    <projectId>10001</projectId>
+    <projectKey>SW</projectKey>
+    <exportDate>2025-07-08 21:24:48 UTC</exportDate>
+    <folders/>
+    <testCases>
+        <testCase id="247026972" key="SW-T1">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>MORPOG</createdBy>
+            <createdOn>2025-07-08 21:02:43 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[ Exibição da página de login]]></name>
+            <objective><![CDATA[Verificar funcionalidade do login]]></objective>
+            <owner>640bc2e19ce2cd2c241263d3</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given o usuário acessa a loja virtual sem estar autenticado
+When o usuário clica na opção "Entrar" no cabeçalho ou outro ponto visível da interface
+Then o sistema redireciona o usuário para a página de login
+And a URL contém "/login"
+And a página exibe campos de e-mail/usuário e senha]]></details>
+            </testScript>
+        </testCase>
+        <testCase id="247028855" key="SW-T2">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>MORPOG</createdBy>
+            <createdOn>2025-07-08 21:13:23 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Estrutura da página de login]]></name>
+            <objective><![CDATA[Visualizar a estrutura da p&aacute;gina de login]]></objective>
+            <owner>640bc2e19ce2cd2c241263d3</owner>
+            <precondition><![CDATA[Usu&aacute;rio acessou a p&aacute;gina de login]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[<ul><li>Verifique visualmente se os seguintes elementos est&atilde;o presentes:<ul><li id="isPasted">Campo de <strong>e-mail ou nome de usu&aacute;rio</strong></li><li>Campo de <strong>senha</strong></li><li>Bot&atilde;o &ldquo;Entrar&rdquo;</li><li>Link &ldquo;Cadastrar-se&rdquo;</li><li>Link ou bot&atilde;o &ldquo;Esqueci minha senha&rdquo;</li></ul></li></ul>]]></description>
+                        <expectedResult><![CDATA[]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="247028881" key="SW-T3">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>MORPOG</createdBy>
+            <createdOn>2025-07-08 21:14:35 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Login com credenciais válidas]]></name>
+            <objective><![CDATA[Verificar funcionamento do sistema de login]]></objective>
+            <owner>640bc2e19ce2cd2c241263d3</owner>
+            <precondition><![CDATA[Conta v&aacute;lida cadastrada no sistema]]></precondition>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="steps">
+                <steps>
+                    <step index="0">
+                        <customFields/>
+                        <description><![CDATA[Preencha o campo e-mail com um valor v&aacute;lido (ex: <code id="isPasted">teste@dominio.com</code>)]]></description>
+                        <expectedResult><![CDATA[]]></expectedResult>
+                    </step>
+                    <step index="1">
+                        <customFields/>
+                    </step>
+                    <step index="2">
+                        <customFields/>
+                        <description><![CDATA[Clique no bot&atilde;o &ldquo;Entrar&rdquo;]]></description>
+                        <expectedResult><![CDATA[<ul><li id="isPasted">Autentica&ccedil;&atilde;o &eacute; bem-sucedida</li><li>Redirecionamento para painel do cliente ou p&aacute;gina segura</li><li>Exibi&ccedil;&atilde;o de nome do usu&aacute;rio ou avatar</li><li>Exibi&ccedil;&atilde;o do bot&atilde;o &ldquo;Sair&rdquo; ou equivalente</li></ul>]]></expectedResult>
+                    </step>
+                </steps>
+            </testScript>
+        </testCase>
+        <testCase id="247029258" key="SW-T4">
+            <attachments/>
+            <confluencePageLinks/>
+            <createdBy>MORPOG</createdBy>
+            <createdOn>2025-07-08 21:18:30 UTC</createdOn>
+            <customFields/>
+            <issues/>
+            <labels/>
+            <name><![CDATA[Login com credenciais inválidas ou campos vazios]]></name>
+            <objective><![CDATA[Tentar realizar um login com credenciais inv&aacute;lidas]]></objective>
+            <owner>640bc2e19ce2cd2c241263d3</owner>
+            <priority><![CDATA[Normal]]></priority>
+            <status><![CDATA[Draft]]></status>
+            <parameters/>
+            <testDataWrapper/>
+            <testScript type="bdd">
+                <details><![CDATA[Given o usuário está na página de login
+When o usuário insere dados inválidos ou deixa os campos de e-mail ou senha em branco
+And clica no botão "Entrar"
+Then o sistema deve exibir uma mensagem de erro informativa como "Usuário ou senha inválidos"
+And o sistema não deve redirecionar o usuário para outra página
+And o campo com erro deve receber o foco para correção]]></details>
+            </testScript>
+        </testCase>
+    </testCases>
+</project>
